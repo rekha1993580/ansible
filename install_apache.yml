@@ -1,6 +1,10 @@
 ---
-- hosts: all
+- hosts: 192.168.0.103
   tasks:
+    - name: install httpd
+      yum:
+        name: httpd
+        state: present
     - name: start httpd
       service:
         name: httpd
