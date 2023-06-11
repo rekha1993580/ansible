@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: stop httpd
+      service:
+        name: httpd
+        state: stopped
+    - name: uninstall httpd
+      yum: 
+        name: httpd
+        state: absent
